@@ -1,0 +1,43 @@
+<!-- <div class="row">
+    <div class="col-4">
+        <ul>
+           Error in for common mistake -- @for(let item of roleList; track roleId) {
+             -- correct syntax --  @for (os of operatingSystems; track os.id)  
+            @for (item of roleList; track item.roleId) {
+             <li *ngFor = "let item of roleList">
+                {{item.role}}
+            </li>   old method 
+            <li>
+                {{item.role}}
+            </li>
+        }
+        </ul>
+    </div>
+    <div class="col-4">
+        <select name="roles">
+            <option *ngFor="let item of roleList" [value]="item.roleId">{{item.role}}</option>
+        </select>
+    </div>
+</div> --> 
+
+<div class="row">
+    <div class="col-12 text-center">
+        
+        <table class="table table-bordered">
+            <thead>
+                <th>Sr No.</th>
+                <th>Role Name</th>
+            </thead>
+            <tbody>
+                <tr *ngFor = "let item of roleList; let srno = index">
+                    <td>
+                        {{srno + 1}}
+                    </td>
+                    <td>
+                        {{item.role}}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

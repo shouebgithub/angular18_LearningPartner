@@ -1,0 +1,29 @@
+<p>{{Version}}</p>
+
+<div class="row">
+    <div class="col-3"><p>{{firstName}}</p>
+    </div>
+    <div class="col-3"><p>{{Angular_Version}}</p>
+    </div>
+    <div class="col-3"><p>{{currentDate}}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-3">
+        <input type="text" [value]="firstName" class="form-control">
+    </div>
+    <div class="col-3">
+        <input [type]="inputType">
+    </div>
+<div class="col-3">
+    <input type="text" [(ngModel)]="firstName">
+</div>
+</div>
+<div class="row">
+    <div class="col-3">
+        <button class="btn btn-success" (click)="showAlert()">Click</button>
+    </div>
+    <div class="col-3">
+        <button class="btn btn-primary" (click)="showMessage('Angular Project')">show msg</button>
+    </div>
+</div>
